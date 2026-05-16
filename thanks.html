@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>下單成功 - 感謝您的訂購</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3182274311954572');
+    fbq('track', 'PageView');
+    // FB 購買事件
+    fbq('track', 'Purchase', {
+      value: 1398,
+      currency: 'TWD',
+      content_name: '霸王養精蓄力丹',
+      content_ids: ['bawang-001'],
+      content_type: 'product',
+      num_items: 1
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=Purchase&noscript=1"/></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', 'PingFang TC', sans-serif;
+      background: #f0f9f4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+      color: #333;
+    }
+    .thanks-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(26,122,60,.15);
+      padding: 48px 36px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+    .thanks-icon {
+      font-size: 72px;
+      margin-bottom: 20px;
+      display: block;
+      animation: bounceIn .6s ease;
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      70% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .thanks-title {
+      font-size: clamp(24px, 6vw, 34px);
+      font-weight: 900;
+      color: #1a7a3c;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .thanks-subtitle {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .thanks-subtitle strong {
+      color: #1a7a3c;
+    }
+    .thanks-divider {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+      margin: 28px 0;
+    }
+    .thanks-info-box {
+      background: #f0f9f4;
+      border: 1px solid #c8e6d0;
+      border-radius: 12px;
+      padding: 22px 20px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    .thanks-info-box .info-title {
+      font-size: 15px;
+      font-weight: 900;
+      color: #1a7a3c;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .thanks-info-box .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(26,122,60,.12);
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+    }
+    .thanks-info-box .info-item:last-child { border-bottom: none; }
+    .thanks-info-box .info-item .num {
+      background: #1a7a3c;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .thanks-privacy {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    .thanks-privacy strong { color: #555; }
+
+    @media (max-width: 480px) {
+      .thanks-card { padding: 36px 20px; }
+      .thanks-icon { font-size: 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thanks-card">
+    <span class="thanks-icon">✅</span>
+    <h1 class="thanks-title">下單成功！</h1>
+    <p class="thanks-subtitle">
+      感謝您的信任與支持。<br/>
+      我們的客服將在 <strong>24小時內</strong> 與您聯繫，確認訂單並安排配送。
+    </p>
+
+    <hr class="thanks-divider" />
+
+    <div class="thanks-info-box">
+      <div class="info-title">📋 接下來的流程</div>
+      <div class="info-item">
+        <div class="num">1</div>
+        <div>客服將在 <strong>24小時內</strong> 主動與您聯繫，確認訂單資訊。</div>
+      </div>
+      <div class="info-item">
+        <div class="num">2</div>
+        <div>確認後安排出貨，配送至您指定的地址。</div>
+      </div>
+      <div class="info-item">
+        <div class="num">3</div>
+        <div>收到商品後，以<strong>貨到付款</strong>方式完成付款即可。</div>
+      </div>
+    </div>
+
+    <p class="thanks-privacy">
+      🔒 您的個人資料受到嚴格保護，僅用於本次訂單確認與配送。<br/>
+      <strong>包裝採全密封中性外箱</strong>，外觀無任何敏感字眼，請放心等候。
+    </p>
+  </div>
+
+</body>
+</html>

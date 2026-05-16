@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>台灣男性微循環活力自我檢測 - 康健雜誌 × 邱文祥教授</title>
+<meta name="description" content="國際泌尿權威邱文祥教授聯合康健雜誌推出，專為50歲以上台灣男性設計的微循環活力自我檢測，3分鐘了解你的身體狀況。">
+
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1517022609792658');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1517022609792658&ev=PageView&noscript=1"/></noscript>
+
+<!-- 防護：禁用右鍵 + 快捷鍵 -->
+<script>
+document.addEventListener('contextmenu',function(e){e.preventDefault();});
+document.addEventListener('keydown',function(e){
+  var k=e.key;
+  if(k==='F12'){e.preventDefault();return false;}
+  if(e.ctrlKey&&(k==='u'||k==='U')){e.preventDefault();return false;}
+  if(e.ctrlKey&&(k==='s'||k==='S')){e.preventDefault();return false;}
+  if(e.ctrlKey&&(k==='a'||k==='A')){e.preventDefault();return false;}
+  if(e.ctrlKey&&e.shiftKey&&(k==='I'||k==='i'||k==='J'||k==='j'||k==='C'||k==='c')){e.preventDefault();return false;}
+});
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{font-family:'Microsoft JhengHei','PingFang TC','Noto Sans TC',sans-serif;background:#f5f5f5;color:#222;-webkit-font-smoothing:antialiased;}
+
+/* ===== 康健頂部導航 ===== */
+.ch-top-bar{background:#1a7a3c;color:#fff;font-size:12px;padding:5px 0;}
+.ch-top-bar .inner{max-width:1000px;margin:0 auto;padding:0 16px;display:flex;gap:16px;}
+.ch-top-bar a{color:rgba(255,255,255,.85);text-decoration:none;}
+.ch-top-bar a:hover{color:#fff;}
+.ch-main-nav{background:#fff;border-bottom:2px solid #1a7a3c;position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ch-main-nav .inner{max-width:1000px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:12px;height:56px;}
+.ch-logo-wrap{display:flex;align-items:center;gap:6px;text-decoration:none;flex-shrink:0;}
+.ch-logo-text{font-size:22px;font-weight:900;color:#1a7a3c;letter-spacing:-1px;}
+.ch-logo-sub{font-size:10px;color:#666;line-height:1.3;}
+.ch-search{flex:1;max-width:200px;border:1px solid #ddd;border-radius:20px;padding:6px 14px;font-size:13px;outline:none;}
+.ch-nav-btns{display:flex;gap:8px;margin-left:auto;flex-shrink:0;}
+.ch-btn-subscribe{background:#1a7a3c;color:#fff;border:none;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.ch-btn-login{background:#fff;color:#1a7a3c;border:1px solid #1a7a3c;border-radius:20px;padding:6px 14px;font-size:12px;cursor:pointer;white-space:nowrap;}
+.ch-cat-nav{background:#fff;border-bottom:1px solid #eee;}
+.ch-cat-nav .inner{max-width:1000px;margin:0 auto;padding:0 16px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
+.ch-cat-nav .inner::-webkit-scrollbar{display:none;}
+.ch-cat-nav a{display:block;padding:9px 14px;font-size:13px;color:#555;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;}
+.ch-cat-nav a:hover{color:#1a7a3c;}
+.ch-cat-nav a.active{color:#1a7a3c;font-weight:700;border-bottom-color:#1a7a3c;}
+
+/* ===== 主容器 ===== */
+.quiz-wrap{max-width:680px;margin:0 auto;padding:24px 16px 60px;}
+
+/* ===== 問卷卡片 ===== */
+.quiz-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,.08);overflow:hidden;display:none;}
+.quiz-card.active{display:block;}
+
+/* ===== 進度條 ===== */
+.progress-bar-wrap{padding:14px 20px 0;}
+.progress-label{font-size:12px;color:#999;margin-bottom:6px;display:flex;justify-content:space-between;}
+.progress-bar{height:6px;background:#eee;border-radius:3px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,#1a7a3c,#2ecc71);border-radius:3px;transition:width .4s ease;}
+
+/* ===== 問卷圖片 ===== */
+.quiz-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#e8f5ee;display:block;}
+.quiz-img-placeholder{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#e8f5ee,#d4edda);display:flex;align-items:center;justify-content:center;font-size:13px;color:#999;}
+
+/* ===== 問卷內容 ===== */
+.quiz-body{padding:22px 20px 24px;}
+.quiz-tag{display:inline-block;background:#e8f5ee;color:#1a7a3c;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:12px;letter-spacing:.5px;}
+.quiz-question{font-size:20px;font-weight:900;color:#1a1a1a;line-height:1.5;margin-bottom:8px;}
+.quiz-sub{font-size:13px;color:#888;margin-bottom:20px;line-height:1.6;}
+
+/* ===== 選項按鈕 ===== */
+.quiz-options{display:flex;flex-direction:column;gap:10px;}
+.quiz-opt{display:flex;align-items:center;gap:12px;padding:14px 16px;border:2px solid #e8e8e8;border-radius:10px;cursor:pointer;transition:all .2s;background:#fff;text-align:left;width:100%;font-size:15px;color:#333;font-family:inherit;}
+.quiz-opt:hover{border-color:#1a7a3c;background:#f0faf4;}
+.quiz-opt.selected{border-color:#1a7a3c;background:#e8f5ee;color:#1a7a3c;font-weight:700;}
+.quiz-opt .opt-icon{width:36px;height:36px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:background .2s;}
+.quiz-opt.selected .opt-icon{background:#1a7a3c;}
+.quiz-opt .opt-text{flex:1;line-height:1.4;}
+.quiz-opt .opt-text strong{display:block;font-size:15px;}
+.quiz-opt .opt-text span{font-size:12px;color:#999;margin-top:2px;display:block;}
+.quiz-opt.selected .opt-text span{color:#1a7a3c;}
+
+/* ===== 下一題按鈕（隱藏，保留結構備用） ===== */
+.quiz-next-btn{display:none;}
+
+/* ===== 返回上一題按鈕 ===== */
+.quiz-back-btn{display:flex;align-items:center;gap:6px;background:none;border:none;color:#999;font-size:14px;cursor:pointer;padding:10px 0 0;font-family:inherit;}
+.quiz-back-btn:hover{color:#1a7a3c;}
+.quiz-back-btn .back-arrow{font-size:16px;line-height:1;}
+
+/* ===== 選項選中後的過渡提示 ===== */
+.opt-selected-hint{display:none;text-align:center;font-size:13px;color:#1a7a3c;font-weight:700;margin-top:12px;padding:8px;background:#e8f5ee;border-radius:8px;}
+.opt-selected-hint.show{display:block;}
+
+/* ===== 結果頁 CTA 呼吸燈 ===== */
+@keyframes breathe{
+  0%,100%{transform:scale(1);box-shadow:0 4px 16px rgba(229,57,53,.35);}
+  50%{transform:scale(1.03);box-shadow:0 8px 28px rgba(229,57,53,.6);}
+}
+.result-cta-btn{animation:breathe 2s ease-in-out infinite;}
+
+/* ===== 封面頁 ===== */
+.cover-header{background:linear-gradient(135deg,#1a7a3c 0%,#0d5c2e 100%);padding:28px 20px 24px;color:#fff;text-align:center;}
+.cover-badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:4px 14px;font-size:12px;margin-bottom:14px;letter-spacing:.5px;}
+.cover-title{font-size:24px;font-weight:900;line-height:1.4;margin-bottom:8px;}
+.cover-title em{font-style:normal;color:#7fffb2;}
+.cover-sub{font-size:13px;opacity:.85;line-height:1.6;margin-bottom:20px;}
+.cover-doctor-card{background:rgba(255,255,255,.12);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:14px;text-align:left;margin-bottom:20px;}
+.cover-doctor-photo{width:64px;height:64px;border-radius:50%;object-fit:cover;background:#e8f5ee;border:2px solid rgba(255,255,255,.5);flex-shrink:0;}
+.cover-doctor-info{flex:1;}
+.cover-doctor-name{font-size:17px;font-weight:900;}
+.cover-doctor-title{font-size:11px;opacity:.8;margin-top:3px;line-height:1.5;}
+.cover-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.2);padding-top:16px;}
+.cover-stat{flex:1;text-align:center;border-right:1px solid rgba(255,255,255,.2);}
+.cover-stat:last-child{border-right:none;}
+.cover-stat-num{font-size:20px;font-weight:900;color:#7fffb2;}
+.cover-stat-label{font-size:11px;opacity:.75;margin-top:3px;}
+.cover-body{padding:20px;}
+.cover-desc{font-size:14px;color:#555;line-height:1.8;margin-bottom:20px;}
+.cover-checklist{background:#f0faf4;border-radius:10px;padding:16px;margin-bottom:20px;}
+.cover-checklist-title{font-size:13px;font-weight:700;color:#1a7a3c;margin-bottom:10px;}
+.cover-checklist li{font-size:14px;color:#444;padding:5px 0;padding-left:22px;position:relative;list-style:none;line-height:1.5;}
+.cover-checklist li::before{content:'✓';position:absolute;left:0;color:#1a7a3c;font-weight:900;}
+.cover-start-btn{width:100%;padding:17px;background:linear-gradient(135deg,#e53935,#c62828);color:#fff;border:none;border-radius:10px;font-size:18px;font-weight:900;cursor:pointer;letter-spacing:1px;font-family:inherit;box-shadow:0 4px 16px rgba(229,57,53,.35);}
+.cover-privacy{font-size:11px;color:#999;text-align:center;margin-top:10px;}
+
+/* ===== 計算中頁面 ===== */
+.loading-body{padding:50px 20px;text-align:center;}
+.loading-icon{font-size:56px;margin-bottom:20px;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+.loading-title{font-size:20px;font-weight:900;color:#1a1a1a;margin-bottom:8px;}
+.loading-sub{font-size:14px;color:#888;margin-bottom:30px;line-height:1.6;}
+.loading-bar{height:10px;background:#eee;border-radius:5px;overflow:hidden;margin-bottom:12px;}
+.loading-fill{height:100%;background:linear-gradient(90deg,#1a7a3c,#2ecc71);border-radius:5px;width:0;transition:width .1s linear;}
+.loading-percent{font-size:13px;color:#1a7a3c;font-weight:700;}
+.loading-steps{margin-top:24px;text-align:left;}
+.loading-step{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:13px;color:#bbb;transition:color .3s;}
+.loading-step.done{color:#1a7a3c;}
+.loading-step .step-dot{width:18px;height:18px;border-radius:50%;background:#eee;display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;transition:background .3s;}
+.loading-step.done .step-dot{background:#1a7a3c;color:#fff;}
+
+/* ===== 結果頁 ===== */
+.result-header{background:linear-gradient(135deg,#1a7a3c,#0d5c2e);padding:24px 20px;color:#fff;text-align:center;}
+.result-badge{display:inline-block;background:rgba(255,165,0,.25);border:1px solid rgba(255,165,0,.5);color:#ffd700;border-radius:20px;padding:4px 14px;font-size:12px;margin-bottom:12px;font-weight:700;}
+.result-title{font-size:22px;font-weight:900;line-height:1.4;margin-bottom:6px;}
+.result-sub{font-size:13px;opacity:.85;}
+.result-score-wrap{background:#fff;border-radius:12px;margin:16px 20px 0;padding:18px;display:flex;align-items:center;gap:16px;}
+.result-score-circle{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#ff6b35,#e53935);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;}
+.result-score-num{font-size:26px;font-weight:900;color:#fff;line-height:1;}
+.result-score-label{font-size:10px;color:rgba(255,255,255,.8);}
+.result-score-info{flex:1;}
+.result-score-title{font-size:16px;font-weight:900;color:#e53935;margin-bottom:4px;}
+.result-score-desc{font-size:13px;color:#666;line-height:1.6;}
+.result-body{padding:20px;}
+.result-section-title{font-size:16px;font-weight:900;color:#1a1a1a;margin-bottom:12px;padding-left:10px;border-left:3px solid #1a7a3c;}
+.result-analysis{background:#fff8f0;border:1px solid #ffe0c0;border-radius:10px;padding:16px;margin-bottom:20px;}
+.result-analysis-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #ffe8d0;}
+.result-analysis-item:last-child{border-bottom:none;}
+.result-analysis-icon{font-size:20px;flex-shrink:0;margin-top:1px;}
+.result-analysis-text{flex:1;font-size:14px;color:#555;line-height:1.6;}
+.result-analysis-text strong{color:#e53935;display:block;margin-bottom:2px;}
+.result-diagram{width:100%;border-radius:8px;margin-bottom:20px;aspect-ratio:16/9;object-fit:cover;background:#e8f5ee;}
+.result-recommend{background:#e8f5ee;border-radius:10px;padding:16px;margin-bottom:20px;}
+.result-recommend-title{font-size:14px;font-weight:700;color:#1a7a3c;margin-bottom:10px;}
+.product-name{color:#1a7a3c;font-weight:900;background:linear-gradient(120deg,#e8f5ee 0%,#d4edda 100%);padding:1px 5px;border-radius:3px;white-space:nowrap;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+.result-recommend p{font-size:14px;color:#444;line-height:1.8;}
+.result-cta-btn{width:100%;padding:17px;background:linear-gradient(135deg,#e53935,#c62828);color:#fff;border:none;border-radius:10px;font-size:18px;font-weight:900;cursor:pointer;letter-spacing:1px;font-family:inherit;box-shadow:0 4px 16px rgba(229,57,53,.35);margin-bottom:10px;}
+.result-guarantee{display:flex;gap:16px;justify-content:center;margin-top:12px;}
+.result-guarantee-item{text-align:center;font-size:11px;color:#888;}
+.result-guarantee-item .g-icon{font-size:20px;display:block;margin-bottom:3px;}
+
+/* ===== 表單頁 ===== */
+.form-header{background:linear-gradient(135deg,#1a7a3c,#0d5c2e);padding:20px;color:#fff;text-align:center;}
+.form-header-title{font-size:18px;font-weight:900;margin-bottom:4px;}
+.form-header-sub{font-size:13px;opacity:.85;}
+.form-product-wrap{padding:16px 20px;border-bottom:1px solid #eee;}
+.form-product-inner{display:flex;align-items:center;gap:14px;}
+.form-product-img{width:90px;height:90px;object-fit:cover;border-radius:8px;background:#e8f5ee;flex-shrink:0;}
+.form-product-info{flex:1;}
+.form-product-name{font-size:15px;font-weight:900;color:#1a1a1a;margin-bottom:4px;}
+.form-product-price-wrap{display:flex;align-items:center;gap:8px;}
+.form-product-orig{font-size:13px;color:#bbb;text-decoration:line-through;}
+.form-product-curr{font-size:22px;font-weight:900;color:#e53935;}
+.form-product-tag{background:#e53935;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;}
+.form-countdown-wrap{padding:12px 20px;background:#fff8f0;border-bottom:1px solid #ffe0c0;}
+.form-countdown-label{font-size:12px;color:#e53935;font-weight:700;margin-bottom:8px;text-align:center;}
+.countdown-timer{display:flex;justify-content:center;gap:8px;}
+.countdown-unit{background:#1a1a1a;color:#fff;border-radius:6px;padding:8px 12px;text-align:center;min-width:52px;}
+.countdown-num{font-size:24px;font-weight:900;line-height:1;display:block;}
+.countdown-label{font-size:10px;opacity:.6;margin-top:3px;display:block;}
+.countdown-sep{font-size:22px;font-weight:900;color:#1a1a1a;align-self:center;margin-top:-6px;}
+.form-stock-wrap{padding:10px 20px;background:#fff8f0;border-bottom:1px solid #ffe0c0;}
+.stock-label{font-size:12px;color:#e53935;font-weight:700;margin-bottom:6px;}
+.stock-bar{height:8px;background:#eee;border-radius:4px;overflow:hidden;}
+.stock-fill{height:100%;background:linear-gradient(90deg,#e53935,#ff6b35);border-radius:4px;width:78%;}
+.stock-text{font-size:11px;color:#999;margin-top:5px;}
+.stock-text strong{color:#e53935;}
+.form-body{padding:20px;}
+.form-group{margin-bottom:16px;}
+.form-label{display:block;font-size:14px;font-weight:700;color:#333;margin-bottom:7px;}
+.form-input{width:100%;border:2px solid #e0e0e0;border-radius:8px;padding:13px 14px;font-size:16px;font-family:inherit;outline:none;transition:border-color .2s;-webkit-appearance:none;}
+.form-input:focus{border-color:#1a7a3c;}
+.form-privacy{font-size:12px;color:#999;line-height:1.7;margin-bottom:16px;padding:10px 12px;background:#f8f8f8;border-radius:6px;}
+.form-submit-btn{width:100%;padding:17px;background:linear-gradient(135deg,#e53935,#c62828);color:#fff;border:none;border-radius:10px;font-size:18px;font-weight:900;cursor:pointer;letter-spacing:1px;font-family:inherit;box-shadow:0 4px 16px rgba(229,57,53,.35);}
+.form-submit-btn:disabled{background:#ccc;box-shadow:none;cursor:not-allowed;}
+.form-guarantees{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px;}
+.form-guarantee-tag{font-size:12px;color:#666;background:#f5f5f5;padding:5px 12px;border-radius:20px;}
+
+/* ===== 頁尾 ===== */
+.ch-footer{background:#1a7a3c;color:rgba(255,255,255,.7);padding:32px 16px 20px;margin-top:0;}
+.ch-footer-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:24px;}
+.ch-footer-col h4{color:#fff;font-size:13px;margin-bottom:10px;}
+.ch-footer-col a{display:block;font-size:12px;color:rgba(255,255,255,.65);text-decoration:none;margin-bottom:6px;}
+.ch-footer-col a:hover{color:#fff;}
+.ch-footer-bottom{max-width:1000px;margin:0 auto;border-top:1px solid rgba(255,255,255,.2);padding-top:16px;text-align:center;font-size:12px;color:rgba(255,255,255,.5);}
+
+/* ===== RWD ===== */
+@media(max-width:768px){
+  .ch-top-bar{display:none;}
+  .ch-btn-subscribe{display:none;}
+  .ch-search{max-width:130px;}
+  .ch-footer-grid{grid-template-columns:repeat(2,1fr);}
+  .quiz-question{font-size:18px;}
+  .cover-title{font-size:20px;}
+}
+@media(max-width:480px){
+  .ch-footer-grid{grid-template-columns:1fr;}
+  .ch-logo-sub{display:none;}
+  .quiz-opt{padding:12px 14px;}
+  .quiz-opt .opt-icon{width:32px;height:32px;font-size:16px;}
+  .quiz-opt .opt-text strong{font-size:14px;}
+  .cover-stats{flex-direction:row;}
+  .form-product-curr{font-size:20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 康健頂部導航 ===== -->
+<div class="ch-top-bar">
+  <div class="inner">
+    <a href="#">癌症問康健</a>
+    <a href="#">康健知識庫</a>
+    <a href="#">康健嚴選</a>
+    <a href="#">大人社團</a>
+  </div>
+</div>
+<nav class="ch-main-nav">
+  <div class="inner">
+    <a class="ch-logo-wrap" href="#">
+      <span class="ch-logo-text">康健</span>
+      <span class="ch-logo-sub">CommonHealth<br>最值得信任的健康平台</span>
+    </a>
+    <input class="ch-search" type="text" placeholder="請輸入關鍵字">
+    <div class="ch-nav-btns">
+      <button class="ch-btn-subscribe">訂閱康健Pro</button>
+      <button class="ch-btn-login">登入</button>
+    </div>
+  </div>
+</nav>
+<div class="ch-cat-nav">
+  <div class="inner">
+    <a href="#">全部</a>
+    <a href="#">醫療</a>
+    <a href="#">癌症</a>
+    <a href="#" class="active">熟齡</a>
+    <a href="#">養生</a>
+    <a href="#">營養</a>
+    <a href="#">運動</a>
+    <a href="#">心靈</a>
+    <a href="#">人物</a>
+  </div>
+</div>
+
+<!-- ===== 問卷主體 ===== -->
+<div class="quiz-wrap">
+
+  <!-- ===== CARD 0：封面頁 ===== -->
+  <div class="quiz-card active" id="card-0">
+    <div class="cover-header">
+      <div class="cover-badge">🏥 康健雜誌 × 邱文祥教授 聯合推出</div>
+      <div class="cover-title">台灣男性<em>微循環活力</em><br>自我檢測</div>
+      <div class="cover-sub">50歲以上男性專屬・3分鐘・免費・即時結果</div>
+      <div class="cover-doctor-card">
+        <img class="cover-doctor-photo" src="doctor_qiu_portrait.jpg" alt="邱文祥教授" onerror="this.style.background='#2ecc71'">
+        <div class="cover-doctor-info">
+          <div class="cover-doctor-name">邱文祥 教授</div>
+          <div class="cover-doctor-title">新光醫院泌尿科教授級主治醫師<br>國際泌尿科學會（SIU）榮譽會員<br>達文西手術台灣先驅・從事臨床逾30年</div>
+        </div>
+      </div>
+      <div class="cover-stats">
+        <div class="cover-stat">
+          <div class="cover-stat-num">58,000+</div>
+          <div class="cover-stat-label">台灣男性已完成</div>
+        </div>
+        <div class="cover-stat">
+          <div class="cover-stat-num">3分鐘</div>
+          <div class="cover-stat-label">即時獲得結果</div>
+        </div>
+        <div class="cover-stat">
+          <div class="cover-stat-num">100%</div>
+          <div class="cover-stat-label">免費・匿名</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-body">
+      <p class="cover-desc">「在我的門診裡，每天都有50歲以上的男性帶著說不出口的沮喪走進來。他們不知道自己的問題出在哪裡，更不知道有沒有辦法改善。」<br><br>這份檢測由邱文祥教授根據30年臨床經驗設計，幫助您在3分鐘內了解自己的微循環活力狀況，並獲得個人化的改善建議。</p>
+      <div class="cover-checklist">
+        <div class="cover-checklist-title">📋 本次檢測將評估：</div>
+        <ul>
+          <li>您的晨勃頻率與微循環健康狀況</li>
+          <li>關鍵時刻的持久力與血流供應能力</li>
+          <li>腰膝酸軟、疲勞等微循環警訊</li>
+          <li>三高對微循環的影響程度</li>
+          <li>您目前的改善方式是否正確有效</li>
+        </ul>
+      </div>
+      <button class="cover-start-btn" onclick="startQuiz()">▶ 立即開始免費檢測</button>
+      <p class="cover-privacy">🔒 本檢測完全匿名，不會收集任何個人資料</p>
+    </div>
+  </div>
+
+  <!-- ===== CARD 1：Q1 晨勃頻率 ===== -->
+  <div class="quiz-card" id="card-1">
+    <div class="progress-bar-wrap">
+      <div class="progress-label"><span>第 1 題，共 5 題</span><span>20%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+    </div>
+    <img class="quiz-img" src="q1_morning.jpg" alt="晨間活力" onerror="this.style.display='none'">
+    <div class="quiz-body">
+      <div class="quiz-tag">🌅 晨間活力指標</div>
+      <div class="quiz-question">最近三個月，你的<strong>晨勃頻率</strong>如何？</div>
+      <div class="quiz-sub">晨勃是微循環健康最直接的指標，邱文祥教授稱之為「男性身體的每日自我檢測」。</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="selectOpt(this,1,'A')">
+          <div class="opt-icon">💪</div>
+          <div class="opt-text"><strong>幾乎每天都有</strong><span>微循環狀況良好的表現</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,1,'B')">
+          <div class="opt-icon">😐</div>
+          <div class="opt-text"><strong>一週2～3次</strong><span>微循環開始出現輕微警訊</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,1,'C')">
+          <div class="opt-icon">😟</div>
+          <div class="opt-text"><strong>偶爾才有（一週不到一次）</strong><span>微循環堵塞的明顯信號</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,1,'D')">
+          <div class="opt-icon">😔</div>
+          <div class="opt-text"><strong>幾乎完全沒有了</strong><span>微循環嚴重堵塞，需要立即改善</span></div>
+        </button>
+      </div>
+      <button class="quiz-next-btn" id="next-1" onclick="nextCard(2)">下一題 →</button>
+      <div class="opt-selected-hint" id="hint-1">✓ 已記錄，正在進入下一題...</div>
+      <button class="quiz-back-btn" id="back-1" style="display:none" onclick="goBack(1)"><span class="back-arrow">←</span> 返回上一題</button>
+    </div>
+  </div>
+
+  <!-- ===== CARD 2：Q2 持久力 ===== -->
+  <div class="quiz-card" id="card-2">
+    <div class="progress-bar-wrap">
+      <div class="progress-label"><span>第 2 題，共 5 題</span><span>40%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+    </div>
+    <img class="quiz-img" src="q2_couple.jpg" alt="夫妻關係" onerror="this.style.display='none'">
+    <div class="quiz-body">
+      <div class="quiz-tag">❤️ 夫妻關係指標</div>
+      <div class="quiz-question">關鍵時刻，你能<strong>維持多久</strong>？</div>
+      <div class="quiz-sub">持久力直接反映微血管的供血能力。邱文祥教授指出，這是判斷微循環堵塞程度最準確的指標之一。</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="selectOpt(this,2,'A')">
+          <div class="opt-icon">🏆</div>
+          <div class="opt-text"><strong>30分鐘以上</strong><span>微循環供血充足，狀態良好</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,2,'B')">
+          <div class="opt-icon">⏱️</div>
+          <div class="opt-text"><strong>15～30分鐘</strong><span>微循環輕度不足，有改善空間</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,2,'C')">
+          <div class="opt-icon">⚠️</div>
+          <div class="opt-text"><strong>5～15分鐘</strong><span>微循環中度堵塞，需要關注</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,2,'D')">
+          <div class="opt-icon">🚨</div>
+          <div class="opt-text"><strong>不到5分鐘，或無法完成</strong><span>微循環嚴重堵塞，建議盡快改善</span></div>
+        </button>
+      </div>
+      <button class="quiz-next-btn" id="next-2" onclick="nextCard(3)">下一題 →</button>
+      <div class="opt-selected-hint" id="hint-2">✓ 已記錄，正在進入下一題...</div>
+      <button class="quiz-back-btn" id="back-2" onclick="goBack(2)"><span class="back-arrow">←</span> 返回上一題</button>
+    </div>
+  </div>
+
+  <!-- ===== CARD 3：Q3 身體症狀 ===== -->
+  <div class="quiz-card" id="card-3">
+    <div class="progress-bar-wrap">
+      <div class="progress-label"><span>第 3 題，共 5 題</span><span>60%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+    </div>
+    <img class="quiz-img" src="q3_fatigue.jpg" alt="疲勞症狀" onerror="this.style.display='none'">
+    <div class="quiz-body">
+      <div class="quiz-tag">⚠️ 微循環警訊指標</div>
+      <div class="quiz-question">你有以下哪些<strong>身體症狀</strong>？</div>
+      <div class="quiz-sub">這些症狀是微循環堵塞在全身的外在表現，不只影響男性功能，更影響整體健康。</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="selectOpt(this,3,'A')">
+          <div class="opt-icon">🦵</div>
+          <div class="opt-text"><strong>腰膝酸軟、下半身無力</strong><span>腎氣不足、微循環供血不足的典型表現</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,3,'B')">
+          <div class="opt-icon">😴</div>
+          <div class="opt-text"><strong>容易疲勞、白天提不起勁</strong><span>全身微循環效率下降的警訊</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,3,'C')">
+          <div class="opt-icon">😣</div>
+          <div class="opt-text"><strong>以上兩者都有</strong><span>微循環堵塞已影響多個系統，需要積極改善</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,3,'D')">
+          <div class="opt-icon">✅</div>
+          <div class="opt-text"><strong>以上皆無</strong><span>身體狀況尚可，但仍需預防性保養</span></div>
+        </button>
+      </div>
+      <button class="quiz-next-btn" id="next-3" onclick="nextCard(4)">下一題 →</button>
+      <div class="opt-selected-hint" id="hint-3">✓ 已記錄，正在進入下一題...</div>
+      <button class="quiz-back-btn" id="back-3" onclick="goBack(3)"><span class="back-arrow">←</span> 返回上一題</button>
+    </div>
+  </div>
+
+  <!-- ===== CARD 4：Q4 三高 ===== -->
+  <div class="quiz-card" id="card-4">
+    <div class="progress-bar-wrap">
+      <div class="progress-label"><span>第 4 題，共 5 題</span><span>80%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+    </div>
+    <img class="quiz-img" src="q4_health.jpg" alt="健康狀況" onerror="this.style.display='none'">
+    <div class="quiz-body">
+      <div class="quiz-tag">🩺 健康背景指標</div>
+      <div class="quiz-question">你是否有<strong>三高</strong>或正在服用藥物？</div>
+      <div class="quiz-sub">三高（高血壓、高血脂、高血糖）會直接加速微循環堵塞，是50歲以上男性最需要關注的風險因子。</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="selectOpt(this,4,'A')">
+          <div class="opt-icon">💊</div>
+          <div class="opt-text"><strong>有三高，正在服藥控制</strong><span>微循環風險較高，需選擇溫和不衝突的改善方式</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,4,'B')">
+          <div class="opt-icon">📋</div>
+          <div class="opt-text"><strong>有三高，但未服藥</strong><span>微循環堵塞風險高，建議盡快採取行動</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,4,'C')">
+          <div class="opt-icon">🤔</div>
+          <div class="opt-text"><strong>不確定（很久沒健康檢查）</strong><span>建議先了解自身狀況，同時從微循環改善著手</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,4,'D')">
+          <div class="opt-icon">💚</div>
+          <div class="opt-text"><strong>沒有三高，身體狀況良好</strong><span>基礎條件好，微循環改善效果會更快</span></div>
+        </button>
+      </div>
+      <button class="quiz-next-btn" id="next-4" onclick="nextCard(5)">下一題 →</button>
+      <div class="opt-selected-hint" id="hint-4">✓ 已記錄，正在進入下一題...</div>
+      <button class="quiz-back-btn" id="back-4" onclick="goBack(4)"><span class="back-arrow">←</span> 返回上一題</button>
+    </div>
+  </div>
+
+  <!-- ===== CARD 5：Q5 嘗試過的方法 ===== -->
+  <div class="quiz-card" id="card-5">
+    <div class="progress-bar-wrap">
+      <div class="progress-label"><span>第 5 題，共 5 題</span><span>100%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    </div>
+    <img class="quiz-img" src="q5_pills.jpg" alt="嘗試過的方法" onerror="this.style.display='none'">
+    <div class="quiz-body">
+      <div class="quiz-tag">🔍 改善歷程指標</div>
+      <div class="quiz-question">你嘗試過哪些<strong>改善方法</strong>？</div>
+      <div class="quiz-sub">了解您過去的嘗試，有助於我們給出更精準的建議。</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="selectOpt(this,5,'A')">
+          <div class="opt-icon">💙</div>
+          <div class="opt-text"><strong>藍色小藥丸（PDE5抑制劑）</strong><span>治標不治本，且副作用讓我卻步</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,5,'B')">
+          <div class="opt-icon">🌿</div>
+          <div class="opt-text"><strong>一般中藥補品或保健食品</strong><span>效果有限，找不到真正對症的產品</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,5,'C')">
+          <div class="opt-icon">🔄</div>
+          <div class="opt-text"><strong>兩者都試過，效果都不理想</strong><span>需要一個真正從根源改善微循環的方法</span></div>
+        </button>
+        <button class="quiz-opt" onclick="selectOpt(this,5,'D')">
+          <div class="opt-icon">❓</div>
+          <div class="opt-text"><strong>什麼都沒試過</strong><span>不知道從哪裡開始，希望得到專業建議</span></div>
+        </button>
+      </div>
+      <button class="quiz-next-btn" id="next-5" onclick="nextCard('loading')">查看我的檢測結果 →</button>
+      <div class="opt-selected-hint" id="hint-5">✓ 已記錄，正在分析您的結果...</div>
+      <button class="quiz-back-btn" id="back-5" onclick="goBack(5)"><span class="back-arrow">←</span> 返回上一題</button>
+    </div>
+  </div>
+
+  <!-- ===== CARD loading：計算中 ===== -->
+  <div class="quiz-card" id="card-loading">
+    <div class="loading-body">
+      <div class="loading-icon">🔬</div>
+      <div class="loading-title">正在分析您的微循環狀況...</div>
+      <div class="loading-sub">邱文祥教授的AI評估系統正在根據您的5項回答，計算您的微循環活力指數</div>
+      <div class="loading-bar"><div class="loading-fill" id="loading-fill"></div></div>
+      <div class="loading-percent" id="loading-percent">0%</div>
+      <div class="loading-steps">
+        <div class="loading-step" id="step-1"><div class="step-dot">1</div>分析晨勃頻率數據...</div>
+        <div class="loading-step" id="step-2"><div class="step-dot">2</div>評估持久力指標...</div>
+        <div class="loading-step" id="step-3"><div class="step-dot">3</div>比對身體症狀資料庫...</div>
+        <div class="loading-step" id="step-4"><div class="step-dot">4</div>計算三高風險係數...</div>
+        <div class="loading-step" id="step-5"><div class="step-dot">5</div>生成個人化改善建議...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CARD result：結果頁 ===== -->
+  <div class="quiz-card" id="card-result">
+    <div class="result-header">
+      <div class="result-badge">⚠️ 檢測結果：需要關注</div>
+      <div class="result-title">您的微循環活力指數<br>偏低，建議盡快改善</div>
+      <div class="result-sub">根據您的5項回答，邱文祥教授AI評估系統分析如下</div>
+      <div class="result-score-wrap">
+        <div class="result-score-circle">
+          <span class="result-score-num" id="result-score">38</span>
+          <span class="result-score-label">/ 100分</span>
+        </div>
+        <div class="result-score-info">
+          <div class="result-score-title" id="result-level">中度微循環堵塞</div>
+          <div class="result-score-desc" id="result-desc">您的微循環系統已出現明顯堵塞，若不盡快改善，功能退化速度將持續加快。</div>
+        </div>
+      </div>
+    </div>
+    <div class="result-body">
+      <div class="result-section-title">📊 您的個人化分析報告</div>
+      <div class="result-analysis" id="result-analysis">
+        <div class="result-analysis-item">
+          <div class="result-analysis-icon">🌅</div>
+          <div class="result-analysis-text"><strong>晨勃頻率異常</strong>您的晨勃頻率顯示微循環在夜間修復功能不足，這是最早期也最重要的警訊。</div>
+        </div>
+        <div class="result-analysis-item">
+          <div class="result-analysis-icon">⏱️</div>
+          <div class="result-analysis-text"><strong>持久力下降</strong>微血管供血不足導致關鍵時刻無法維持，這不是意志力問題，是生理機制問題。</div>
+        </div>
+        <div class="result-analysis-item">
+          <div class="result-analysis-icon">🌿</div>
+          <div class="result-analysis-text"><strong>建議方向：純漢方微循環修復</strong>根據您的狀況，邱文祥教授建議選擇從根源疏通微循環的純漢方配方，避免化學藥物的副作用風險。</div>
+        </div>
+      </div>
+      <img class="result-diagram" src="q_result_diagram.jpg" alt="微循環示意圖" onerror="this.style.display='none'">
+      <div class="result-recommend">
+        <div class="result-recommend-title">💊 邱文祥教授針對您的狀況推薦：</div>
+        <p>根據您的檢測結果，您目前最需要的是一個能<strong>從根源疏通微循環</strong>、同時對三高人群安全的純漢方配方。在邱文祥教授30年的臨床觀察中，<span class="product-name" onclick="goToForm()">霸王養精蓄力丹</span>是目前台灣市場上最符合這個條件的產品——黑瑪卡、鹿茸、淫羊藿三大核心成分協同作用，不依賴外力強制，3天即可感受到明顯改善。</p>
+      </div>
+      <button class="result-cta-btn" onclick="goToForm()">立即領取讀者專屬半價優惠 ▶</button>
+      <div class="result-guarantee">
+        <div class="result-guarantee-item"><span class="g-icon">🚚</span>免運費</div>
+        <div class="result-guarantee-item"><span class="g-icon">💰</span>貨到付款</div>
+        <div class="result-guarantee-item"><span class="g-icon">↩️</span>30天退款</div>
+        <div class="result-guarantee-item"><span class="g-icon">🔒</span>隱私包裝</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CARD form：表單頁 ===== -->
+  <div class="quiz-card" id="card-form">
+    <div class="form-header">
+      <div class="form-header-title">🎉 讀者專屬優惠・限時半價</div>
+      <div class="form-header-sub">填寫以下資料，客服將優先為您確認訂單</div>
+    </div>
+    <div class="form-product-wrap">
+      <div class="form-product-inner">
+        <img class="form-product-img" src="product_main.jpg" alt="霸王養精蓄力丹" onerror="this.style.background='#e8f5ee'">
+        <div class="form-product-info">
+          <div class="form-product-name"><span class="product-name">霸王養精蓄力丹</span>・1瓶</div>
+          <div class="form-product-price-wrap">
+            <span class="form-product-orig">NT$ 2,778</span>
+            <span class="form-product-curr">NT$ 1,398</span>
+            <span class="form-product-tag">限時半價</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-countdown-wrap">
+      <div class="form-countdown-label">⏰ 讀者專屬優惠倒數計時</div>
+      <div class="countdown-timer">
+        <div class="countdown-unit"><span class="countdown-num" id="cd-h">23</span><span class="countdown-label">小時</span></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-m">59</span><span class="countdown-label">分鐘</span></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span class="countdown-num" id="cd-s">59</span><span class="countdown-label">秒</span></div>
+      </div>
+    </div>
+    <div class="form-stock-wrap">
+      <div class="stock-label">📦 本批次庫存</div>
+      <div class="stock-bar"><div class="stock-fill"></div></div>
+      <div class="stock-text">已售出 78%，僅剩 <strong>22 組</strong></div>
+    </div>
+    <div class="form-body">
+      <form id="order-form" onsubmit="submitForm(event)">
+        <div class="form-group">
+          <label class="form-label" for="f-name">姓名 *</label>
+          <input class="form-input" type="text" id="f-name" placeholder="請輸入您的姓名" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-phone">聯絡電話 *</label>
+          <input class="form-input" type="tel" id="f-phone" placeholder="0912-345-678" required>
+        </div>
+        <div class="form-privacy">🔒 您的個人資料受到嚴格保護，僅用於本次訂單確認，絕不外洩。<br>包裝採全密封中性外箱，無任何敏感字眼，保護您的隱私。</div>
+        <button type="submit" class="form-submit-btn" id="submit-btn">立即半價下單（貨到付款）▶</button>
+        <div class="form-guarantees">
+          <span class="form-guarantee-tag">✓ 貨到付款</span>
+          <span class="form-guarantee-tag">✓ 免運費</span>
+          <span class="form-guarantee-tag">✓ 30天退款保障</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div><!-- /.quiz-wrap -->
+
+<!-- ===== 頁尾 ===== -->
+<footer class="ch-footer">
+  <div class="ch-footer-grid">
+    <div class="ch-footer-col">
+      <h4>產品與服務</h4>
+      <a href="#">康健大人社團</a>
+      <a href="#">康健知識庫</a>
+      <a href="#">癌症問康健</a>
+      <a href="#">康健嚴選</a>
+    </div>
+    <div class="ch-footer-col">
+      <h4>訂戶／會員服務</h4>
+      <a href="#">康健會員中心</a>
+      <a href="#">會員權益</a>
+      <a href="#">訂閱康健雜誌</a>
+      <a href="#">訂閱電子報</a>
+    </div>
+    <div class="ch-footer-col">
+      <h4>業務合作</h4>
+      <a href="#">廣告刊登</a>
+      <a href="#">內容授權</a>
+      <a href="#">書籍投稿</a>
+    </div>
+    <div class="ch-footer-col">
+      <h4>關於康健</h4>
+      <a href="#">關於我們</a>
+      <a href="#">人才招募</a>
+      <a href="#">聯絡客服</a>
+      <a href="#">隱私權政策</a>
+    </div>
+  </div>
+  <div class="ch-footer-bottom">
+    © 2026 康健雜誌 CommonHealth Magazine. All rights reserved.<br>
+    本文內容僅供參考，不構成醫療建議。如有健康疑慮，請諮詢專業醫師。
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ===== 答案記錄 =====
+  var _ans = {};
+  var _ip = '';
+
+  // ===== 取得 IP =====
+  fetch('https://api.ipify.org?format=json')
+    .then(function(r){return r.json();})
+    .catch(function(){return{ip:'unknown'};})
+    .then(function(d){_ip=d.ip||'unknown';});
+
+  // ===== 封面開始 =====
+  window.startQuiz = function(){
+    if(typeof fbq!=='undefined') fbq('track','ViewContent');
+    showCard('card-1');
+    window.scrollTo({top:0,behavior:'smooth'});
+  };
+
+  // ===== 選擇選項（自動跳題） =====
+  window.selectOpt = function(el, qNum, val){
+    var card = document.getElementById('card-'+qNum);
+    // 防止重複點擊
+    if(card.dataset.transitioning === '1') return;
+    card.querySelectorAll('.quiz-opt').forEach(function(o){
+      o.classList.remove('selected');
+      o.style.pointerEvents = 'none';
+    });
+    el.classList.add('selected');
+    _ans['q'+qNum] = val;
+    // 顯示提示文字
+    var hint = document.getElementById('hint-'+qNum);
+    if(hint) hint.classList.add('show');
+    // 標記跳轉中
+    card.dataset.transitioning = '1';
+    // 0.8秒後自動跳題
+    setTimeout(function(){
+      card.dataset.transitioning = '0';
+      card.querySelectorAll('.quiz-opt').forEach(function(o){ o.style.pointerEvents = ''; });
+      if(qNum < 5){
+        nextCard(qNum + 1);
+      } else {
+        nextCard('loading');
+      }
+    }, 800);
+  };
+
+  // ===== 返回上一題 =====
+  window.goBack = function(qNum){
+    // 清除當前題答案
+    delete _ans['q'+qNum];
+    var card = document.getElementById('card-'+qNum);
+    if(card){
+      card.querySelectorAll('.quiz-opt').forEach(function(o){
+        o.classList.remove('selected');
+        o.style.pointerEvents = '';
+      });
+      var hint = document.getElementById('hint-'+qNum);
+      if(hint) hint.classList.remove('show');
+      card.dataset.transitioning = '0';
+    }
+    if(qNum === 1){
+      showCard('card-0');
+    } else {
+      showCard('card-'+(qNum-1));
+    }
+    window.scrollTo({top:0,behavior:'smooth'});
+  };
+
+  // ===== 下一題 =====
+  window.nextCard = function(target){
+    if(target === 'loading'){
+      showCard('card-loading');
+      window.scrollTo({top:0,behavior:'smooth'});
+      runLoading();
+    } else {
+      showCard('card-'+target);
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+  };
+
+  // ===== 計算動畫 =====
+  function runLoading(){
+    var fill = document.getElementById('loading-fill');
+    var pct = document.getElementById('loading-percent');
+    var steps = [
+      {id:'step-1', delay:400},
+      {id:'step-2', delay:900},
+      {id:'step-3', delay:1400},
+      {id:'step-4', delay:1900},
+      {id:'step-5', delay:2400}
+    ];
+    var start = Date.now();
+    var duration = 3200;
+    function tick(){
+      var elapsed = Date.now() - start;
+      var p = Math.min(100, Math.round(elapsed/duration*100));
+      fill.style.width = p+'%';
+      pct.textContent = p+'%';
+      if(p < 100){ requestAnimationFrame(tick); }
+      else { setTimeout(function(){ showResult(); }, 300); }
+    }
+    requestAnimationFrame(tick);
+    steps.forEach(function(s){
+      setTimeout(function(){
+        var el = document.getElementById(s.id);
+        if(el){ el.classList.add('done'); el.querySelector('.step-dot').textContent='✓'; }
+      }, s.delay);
+    });
+  }
+
+  // ===== 顯示結果（根據答案微調） =====
+  function showResult(){
+    // 計算分數（所有人都是偏低，但分數略有差異）
+    var score = 38;
+    var level = '中度微循環堵塞';
+    var desc = '您的微循環系統已出現明顯堵塞，若不盡快改善，功能退化速度將持續加快。';
+    if(_ans.q1==='D'||_ans.q2==='D'){
+      score = 22; level='重度微循環堵塞';
+      desc='您的微循環系統堵塞情況較為嚴重，建議立即採取行動，盡快恢復正常供血功能。';
+    } else if(_ans.q1==='A'&&_ans.q2==='A'){
+      score = 55; level='輕度微循環不足';
+      desc='您的基礎狀況尚可，但微循環已出現輕度不足的跡象，趁早保養可以事半功倍。';
+    }
+    // 三高特別提示
+    var analysisExtra = '';
+    if(_ans.q4==='A'||_ans.q4==='B'){
+      analysisExtra = '<div class="result-analysis-item"><div class="result-analysis-icon">💊</div><div class="result-analysis-text"><strong>三高風險提示</strong>您有三高狀況，化學藥物（藍色小藥丸）對您的心血管風險更高。純漢方的<span class="product-name" onclick="goToForm()">霸王養精蓄力丹</span>溫和不衝突，是更安全的選擇。</div></div>';
+    }
+    document.getElementById('result-score').textContent = score;
+    document.getElementById('result-level').textContent = level;
+    document.getElementById('result-desc').textContent = desc;
+    if(analysisExtra){
+      document.getElementById('result-analysis').insertAdjacentHTML('beforeend', analysisExtra);
+    }
+    showCard('card-result');
+    window.scrollTo({top:0,behavior:'smooth'});
+    if(typeof fbq!=='undefined') fbq('track','Lead');
+  }
+
+  // ===== 前往表單 =====
+  window.goToForm = function(){
+    if(typeof fbq!=='undefined') fbq('track','AddToCart');
+    showCard('card-form');
+    window.scrollTo({top:0,behavior:'smooth'});
+  };
+
+  // ===== 提交表單 =====
+  window.submitForm = function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    if(!name||!phone){alert('請填寫姓名與電話');return;}
+    if(typeof fbq!=='undefined') fbq('track','AddToCart');
+    var btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = '提交中...';
+    var gUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7sm-wHHiYmxLXKW0mgLV_bULADdNLUzIwv6cfq870vE6zNA/formResponse';
+    var body = new URLSearchParams();
+    body.append('entry.516211201', name);
+    body.append('entry.1762877689', phone);
+    body.append('entry.1005513444', _ip);
+    fetch(gUrl, {method:'POST', mode:'no-cors', body:body})
+      .catch(function(){})
+      .finally(function(){
+        setTimeout(function(){ window.location.href='thanks.html'; }, 800);
+      });
+  };
+
+  // ===== 切換卡片 =====
+  function showCard(id){
+    document.querySelectorAll('.quiz-card').forEach(function(c){c.classList.remove('active');});
+    var target = document.getElementById(id);
+    if(target) target.classList.add('active');
+  }
+
+  // ===== 倒計時 =====
+  function initCountdown(){
+    var key = 'bawang_quiz_cd';
+    var stored = localStorage.getItem(key);
+    var end;
+    if(stored){ end = parseInt(stored); }
+    else { end = Date.now() + 24*60*60*1000; localStorage.setItem(key, end); }
+    function tick(){
+      var diff = Math.max(0, end - Date.now());
+      var h = Math.floor(diff/3600000);
+      var m = Math.floor((diff%3600000)/60000);
+      var s = Math.floor((diff%60000)/1000);
+      var hEl=document.getElementById('cd-h'), mEl=document.getElementById('cd-m'), sEl=document.getElementById('cd-s');
+      if(hEl) hEl.textContent = String(h).padStart(2,'0');
+      if(mEl) mEl.textContent = String(m).padStart(2,'0');
+      if(sEl) sEl.textContent = String(s).padStart(2,'0');
+      if(diff<=0){ localStorage.removeItem(key); }
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+  initCountdown();
+
+})();
+</script>
+</body>
+</html>
